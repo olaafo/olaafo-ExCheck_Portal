@@ -1,0 +1,12 @@
+# Deny direct access to the config file
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Deny directory listing
+Options -Indexes
+
+# Protect uploads from script execution
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
+    Require all denied
+</FilesMatch>

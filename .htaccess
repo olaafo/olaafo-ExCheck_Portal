@@ -1,0 +1,13 @@
+# EntEx Portal – Root .htaccess
+
+# Deny access to config file
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Prevent directory listing
+Options -Indexes
+
+# PHP settings (if needed on shared hosting)
+# php_flag display_errors Off
+# php_value session.cookie_httponly 1

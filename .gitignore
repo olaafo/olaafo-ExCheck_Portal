@@ -1,0 +1,26 @@
+# Uploads (keep directory, not files)
+uploads/students/*.jpg
+uploads/students/*.jpeg
+uploads/students/*.png
+uploads/students/*.gif
+uploads/students/*.webp
+uploads/*.jpg
+uploads/*.jpeg
+uploads/*.png
+uploads/*.gif
+uploads/*.webp
+uploads/*.svg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temp
+*.log
+*.tmp
