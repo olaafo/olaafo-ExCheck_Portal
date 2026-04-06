@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save_
         $score    = (float)($data['score'] ?? 0);
         $maxScore = $data['max_score'] ?? '100';
         $gradeInfo = calculateGrade($score, $maxScore);
-        $meetscut  = meetsCountoff($score, $maxScore) ? 1 : 0;
+        $meetscut  = meetsCutoff($score, $maxScore) ? 1 : 0;
 
         $db->prepare('INSERT INTO results (student_id, subject_id, score, max_score, grade, comment, meet_cutoff, qualified_interview, interview_date, interview_time, resit, resit_date)
                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?)

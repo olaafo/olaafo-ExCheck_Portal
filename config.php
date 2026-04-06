@@ -155,7 +155,7 @@ function calculateGrade(float $score, string $maxScore): array {
     return ['grade' => 'N/A', 'comment' => ''];
 }
 
-function meetsCountoff(float $score, string $maxScore): bool {
+function meetsCutoff(float $score, string $maxScore): bool {
     $key = 'cutoff_' . $maxScore;
     $cutoff = (float)getSetting($key, '50');
     return $score >= $cutoff;
